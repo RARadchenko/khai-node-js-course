@@ -1,19 +1,24 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
+    "drizzle-kit": "^0.20.14",
+    "drizzle-orm": "^0.30.1",
+    "express": "^5.1.0",
+    "pg": "^8.11.3"
   },
   "name": "khai-node-js-course",
   "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node src/index.js",
+    "migration:generate": "drizzle-kit generate:pg",
+    "migration:push": "drizzle-kit push:pg"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RARadchenko/khai-node-js-course.git"
   },
-  "author": "",
+  "author": "Ruslan Radchenko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RARadchenko/khai-node-js-course/issues"
